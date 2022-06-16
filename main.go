@@ -3,16 +3,16 @@ package main
 import (
 	"os"
 
-	"github.com/hashicorp/vagrant-guest-plugin-skeleton/internal/guest"
 	sdk "github.com/hashicorp/vagrant-plugin-sdk"
+	"github.com/soapy1/vagrant-guest-parrotos/internal/guest"
 )
 
 // Options are the SDK options to use for instantiation.
 var ComponentOptions = []sdk.Option{
 	sdk.WithComponents(
-		&guest.MySpecialGuest{},
+		&guest.ParrotOS{},
 	),
-	sdk.WithName("myspecialguest"),
+	sdk.WithName("parrotos"),
 }
 
 func main() {
